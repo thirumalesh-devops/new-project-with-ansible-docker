@@ -1,0 +1,23 @@
+---
+- hosts: all
+  become: true
+  become_user: root
+  remote_user: root
+  gather_facts: no
+  tasks:
+    - name: build container image
+      docker_image:
+        name: thirumalesh:v1.0
+        build:
+          path: .Dockerfile
+          source: build
+        state: present
+    - name: list the docker images 
+      command: docker image ls
+
+   - name: Docker container run
+     command: docker run -dit -p 8081:8081 thirumalesh:v1.0
+
+   - name: Docker container ls
+     command: docker container ls
+
