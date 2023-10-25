@@ -16,7 +16,7 @@
       command: docker image ls
 
    - name: Docker container run
-     command: docker run -dit -p 8081:8081 thirumalesh:v1.0
+     command: docker container run -dit -p 8081:8081 thirumalesh:v1.0
 
    - name: Docker container ls
      command: docker container ls
