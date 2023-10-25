@@ -12,7 +12,7 @@ pipeline {
         stage('Run Ansible playbook') {
             steps {
                 echo "Run the Ansible playbook"
-                sh 'ansible-playbook '
+                sh 'ansible-playbook ansible-playbook.yml'
             }
         }
     }
