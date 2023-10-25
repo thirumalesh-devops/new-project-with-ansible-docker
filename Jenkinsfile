@@ -5,7 +5,7 @@ pipeline {
         stage('Clone repository') {
             steps {
                 echo "Cloning the code from the GITHUB...!"
-                git 'https://https://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@github.com/vtiru05/new-project-with-ansible-docker.git@github.com/vtiru05/new-project-with-ansible-docker.git'
+		checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '7ad72e84-9594-4867-bdf3-4e452fb4be23', url: 'https://github.com/vtiru05/new-project-with-ansible-docker.git']]])
             }
         }
         stage('Build Docker image') {
