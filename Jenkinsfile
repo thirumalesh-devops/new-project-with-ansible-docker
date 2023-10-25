@@ -5,7 +5,7 @@ pipeline {
         stage('Clone repository') {
             steps {
                 echo "Cloning the code from the GITHUB...!"
-                git 'https://github.com/vtiru05/new-project-with-ansible-docker.git'
+                git 'https://https://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@github.com/vtiru05/new-project-with-ansible-docker.git@github.com/vtiru05/new-project-with-ansible-docker.git'
             }
         }
         stage('Build Docker image') {
